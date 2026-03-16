@@ -1,36 +1,322 @@
 <!doctype html>
-
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Descubre La Font Roja, uno de los parques naturales más emblemáticos de Alcoy, con información sobre biodiversidad, rutas y visita."
+    />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>La Font Roja - Alcoy</title>
   </head>
+
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source
-          srcset="./assets/images/logo.png?as=webp&width=350"
-          type="image/webp"
-        />
-        <img
-          src="./assets/images/logo.png?width=350"
-          alt="Universitat Oberta de Catalunya"
-          class="uoc-logo"
-        />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__brand" href="#top">La Font Roja</a>
+
+        <nav aria-label="Navegación principal">
+          <ul class="header__menu">
+            <li><a class="header__link" href="#about">Parque</a></li>
+            <li><a class="header__link" href="#biodiversity">Naturaleza</a></li>
+            <li><a class="header__link" href="#routes">Rutas</a></li>
+            <li><a class="header__link" href="#gallery">Galería</a></li>
+            <li><a class="header__link" href="#access">Acceso</a></li>
+            <li><a class="header__link" href="#visit">Visita</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__container container">
+          <div class="hero__content">
+            <span class="hero__eyebrow">Parque Natural · Alcoy</span>
+            <h1 class="hero__title">
+              La Font Roja, un refugio natural en el corazón de Alcoy
+            </h1>
+            <p class="hero__text">
+              El Parque Natural del Carrascal de la Font Roja es uno de los
+              espacios naturales mejor conservados de la Comunitat Valenciana.
+              Su paisaje, biodiversidad y red de senderos lo convierten en un
+              enclave privilegiado para conocer la montaña mediterránea.
+            </p>
+
+            <div class="hero__actions">
+              <a class="button" href="#about">Descubrir el parque</a>
+              <a class="button hero__button--secondary" href="#routes"
+                >Ver rutas</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section--light">
+        <div class="container">
+          <h2 class="section-title">Sobre La Font Roja</h2>
+          <p class="section-intro">
+            Situado entre los términos municipales de Alcoy e Ibi, este parque
+            natural destaca por su valor ecológico, su paisaje de montaña y su
+            importante papel en la conservación del bosque mediterráneo.
+          </p>
+
+          <div class="about__grid">
+            <div>
+              <p class="about__text">
+                La Font Roja, también conocida como Carrascal de la Font Roja,
+                es uno de los parques naturales más representativos del interior
+                de Alicante. El parque se caracteriza por la presencia de
+                carrascales bien conservados, barrancos, cumbres y zonas de
+                umbría que permiten el desarrollo de una gran diversidad
+                biológica.
+              </p>
+
+              <p class="about__text">
+                Además de su interés natural, La Font Roja tiene un importante
+                valor cultural y paisajístico. Es un lugar muy apreciado tanto
+                por visitantes como por senderistas, fotógrafos y personas
+                interesadas en disfrutar de un entorno natural cercano a la
+                ciudad de Alcoy.
+              </p>
+            </div>
+
+            <figure class="about__image">
+              <img
+                class="about__photo"
+                src="./assets/images/font-roja-about.jpg"
+                alt="Paisaje natural de La Font Roja"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="biodiversity" class="section section--accent">
+        <div class="container">
+          <h2 class="section-title">Biodiversidad y paisaje</h2>
+          <p class="section-intro">
+            El parque alberga una notable variedad de especies vegetales y
+            animales, gracias a su altitud, orientación y condiciones
+            climáticas.
+          </p>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card__icon">
+                <i class="fa-solid fa-tree" aria-hidden="true"></i>
+              </div>
+              <h3 class="card__title">Bosque mediterráneo</h3>
+              <p class="card__text">
+                El carrascal constituye uno de los elementos más característicos
+                del parque. Junto a él aparecen otras especies adaptadas a
+                diferentes zonas de umbría y solana.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card__icon">
+                <i class="fa-solid fa-dove" aria-hidden="true"></i>
+              </div>
+              <h3 class="card__title">Fauna diversa</h3>
+              <p class="card__text">
+                La Font Roja es hábitat de aves rapaces, pequeños mamíferos,
+                reptiles e insectos que encuentran en este entorno un espacio
+                idóneo para vivir y alimentarse.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card__icon">
+                <i class="fa-solid fa-mountain" aria-hidden="true"></i>
+              </div>
+              <h3 class="card__title">Relieve y vistas</h3>
+              <p class="card__text">
+                Sus senderos y miradores permiten disfrutar de panorámicas del
+                entorno y comprender mejor la riqueza geográfica de la sierra.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="routes" class="section section--light">
+        <div class="container">
+          <h2 class="section-title">Rutas y senderos</h2>
+          <p class="section-intro">
+            El parque ofrece distintos itinerarios para recorrerlo de forma
+            tranquila y conocer algunos de sus lugares más destacados.
+          </p>
+
+          <div class="routes">
+            <article class="route">
+              <h3 class="route__title">Ruta del Santuario</h3>
+              <p class="route__meta">
+                Recorrido sencillo · Entorno cultural y natural
+              </p>
+              <p class="route__text">
+                Itinerario ideal para una primera visita. Permite conocer el
+                entorno del santuario y disfrutar de una aproximación accesible
+                al paisaje del parque.
+              </p>
+            </article>
+
+            <article class="route">
+              <h3 class="route__title">Ascenso al Menjador</h3>
+              <p class="route__meta">Dificultad media · Vistas panorámicas</p>
+              <p class="route__text">
+                Una de las rutas más conocidas del parque. Desde la parte alta
+                se obtienen excelentes vistas del relieve montañoso que rodea La
+                Font Roja.
+              </p>
+            </article>
+
+            <article class="route">
+              <h3 class="route__title">Barranc de l’Infern</h3>
+              <p class="route__meta">Recorrido natural · Bosque y barranco</p>
+              <p class="route__text">
+                Un itinerario muy interesante para observar la vegetación y el
+                contraste entre las zonas más húmedas y las áreas de mayor
+                exposición solar.
+              </p>
+            </article>
+
+            <article class="route">
+              <h3 class="route__title">Paseo interpretativo</h3>
+              <p class="route__meta">
+                Ideal para familias · Recorrido didáctico
+              </p>
+              <p class="route__text">
+                Opción perfecta para descubrir el parque con calma,
+                interpretando su flora, fauna y valores medioambientales de una
+                manera sencilla.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section section--accent">
+        <div class="container">
+          <h2 class="section-title">Galería</h2>
+          <p class="section-intro">
+            Una pequeña selección de imágenes para mostrar la belleza del
+            paisaje de La Font Roja y su riqueza natural.
+          </p>
+
+          <div class="gallery">
+            <figure class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/font-roja-1.jpg"
+                alt="Vegetación y sendero en La Font Roja"
+              />
+            </figure>
+
+            <figure class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/font-roja-2.jpg"
+                alt="Vistas del entorno montañoso de La Font Roja"
+              />
+            </figure>
+
+            <figure class="gallery__item">
+              <img
+                class="gallery__image"
+                src="./assets/images/font-roja-3.jpg"
+                alt="Paisaje natural del parque de La Font Roja"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="access" class="section section--light">
+        <div class="container">
+          <h2 class="section-title">Cómo llegar y recomendaciones</h2>
+          <p class="section-intro">
+            La Font Roja es un destino ideal para disfrutar de la naturaleza
+            cerca de Alcoy, pero conviene preparar la visita para aprovechar
+            mejor la experiencia y respetar el entorno.
+          </p>
+
+          <div class="visit__grid">
+            <article class="visit__item">
+              <h3 class="visit__title">Acceso desde Alcoy</h3>
+              <p class="visit__text">
+                El acceso más habitual se realiza desde Alcoy por carretera.
+                Antes de la visita conviene comprobar el estado del acceso y la
+                disponibilidad de aparcamiento en periodos de gran afluencia.
+              </p>
+            </article>
+
+            <article class="visit__item">
+              <h3 class="visit__title">Mejor época para visitar</h3>
+              <p class="visit__text">
+                La primavera y el otoño suelen ser momentos especialmente
+                recomendables por la temperatura, la vegetación y la calidad
+                paisajística del parque.
+              </p>
+            </article>
+
+            <article class="visit__item">
+              <h3 class="visit__title">Turismo responsable</h3>
+              <p class="visit__text">
+                Es importante seguir los senderos señalizados, evitar ruidos
+                innecesarios, no recoger flora ni fauna y dejar el espacio
+                natural en las mismas condiciones en las que se encontró.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="visit" class="section section--accent">
+        <div class="container">
+          <h2 class="section-title">Información para la visita</h2>
+          <p class="section-intro">
+            Antes de planificar la excursión conviene tener en cuenta algunas
+            recomendaciones básicas para disfrutar del parque de forma
+            responsable.
+          </p>
+
+          <div class="visit__grid">
+            <article class="visit__item">
+              <h3 class="visit__title">Cómo llegar</h3>
+              <p class="visit__text">
+                El acceso principal se realiza desde Alcoy. Conviene revisar
+                previamente la ruta y el estado del acceso, especialmente en
+                fechas de mayor afluencia.
+              </p>
+            </article>
+
+            <article class="visit__item">
+              <h3 class="visit__title">Qué llevar</h3>
+              <p class="visit__text">
+                Se recomienda usar calzado cómodo, agua, protección solar y ropa
+                adecuada a la estación del año, especialmente si se van a
+                realizar rutas largas.
+              </p>
+            </article>
+
+            <article class="visit__item">
+              <h3 class="visit__title">Buenas prácticas</h3>
+              <p class="visit__text">
+                Es importante respetar la señalización, no dejar residuos,
+                evitar alterar la fauna y conservar el entorno natural en las
+                mejores condiciones posibles.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <include src="./views/footer.html"></include>
+
     <script type="module" src="./assets/scripts/main.js"></script>
-    <!-- do not remove this line! -->
   </body>
 </html>

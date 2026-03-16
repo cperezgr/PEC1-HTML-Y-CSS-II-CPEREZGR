@@ -1,0 +1,74 @@
+@use "../settings" as s;
+@use "../tools" as t;
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  color: s.$color-surface;
+  background:
+    linear-gradient(s.$color-overlay, s.$color-overlay),
+    url("../images/font-roja-hero.jpg") center / cover no-repeat;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    min-height: 85vh;
+  }
+
+  &__content {
+    max-width: t.rem(720);
+    padding-top: s.$space-3xl;
+    padding-bottom: s.$space-3xl;
+  }
+
+  &__eyebrow {
+    display: inline-block;
+    padding: s.$space-xxs s.$space-sm;
+    margin-bottom: s.$space-md;
+    font-size: t.rem(14);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+  }
+
+  &__title {
+    margin-bottom: s.$space-md;
+    font-size: t.rem(42);
+    line-height: 1.1;
+  }
+
+  &__text {
+    max-width: 58ch;
+    margin-bottom: s.$space-xl;
+    font-size: t.rem(18);
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: s.$space-md;
+  }
+
+  &__button--secondary {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    &__title {
+      font-size: t.rem(58);
+    }
+
+    &__text {
+      font-size: t.rem(20);
+    }
+  }
+}

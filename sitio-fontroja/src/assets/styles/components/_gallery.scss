@@ -1,0 +1,35 @@
+@use "../settings" as s;
+
+.gallery {
+  display: grid;
+  gap: s.$space-md;
+}
+
+.gallery__item {
+  overflow: hidden;
+  border-radius: s.$radius-lg;
+  box-shadow: s.$shadow-md;
+}
+
+.gallery__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

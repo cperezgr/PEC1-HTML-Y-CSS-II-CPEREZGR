@@ -1,0 +1,73 @@
+@use "../settings" as s;
+@use "../tools" as t;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid s.$color-border;
+  backdrop-filter: blur(10px);
+
+  &__container {
+    display: flex;
+    gap: s.$space-md;
+    align-items: center;
+    justify-content: space-between;
+    min-height: t.rem(72);
+  }
+
+  &__brand {
+    font-size: t.rem(22);
+    font-weight: 700;
+    color: s.$color-primary-dark;
+    letter-spacing: 0.02em;
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: s.$space-xs;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: s.$space-xs s.$space-sm;
+    font-size: t.rem(14);
+    font-weight: 700;
+    color: s.$color-text;
+    border-radius: s.$radius-sm;
+    transition:
+      color 0.25s ease,
+      background-color 0.25s ease,
+      transform 0.25s ease;
+
+    &:hover,
+    &:focus {
+      color: s.$color-surface;
+      background-color: s.$color-primary;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    &__container {
+      flex-direction: column;
+      justify-content: center;
+      padding-top: s.$space-sm;
+      padding-bottom: s.$space-sm;
+    }
+
+    &__brand {
+      text-align: center;
+    }
+
+    &__menu {
+      row-gap: s.$space-xs;
+    }
+  }
+}

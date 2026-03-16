@@ -1,0 +1,38 @@
+@use "../settings" as s;
+@use "../tools" as t;
+
+.cards {
+  display: grid;
+  gap: s.$space-lg;
+}
+
+.card {
+  height: 100%;
+  padding: s.$space-xl;
+  background-color: s.$color-surface;
+  border: 1px solid s.$color-border;
+  border-radius: s.$radius-lg;
+  box-shadow: s.$shadow-sm;
+
+  &__icon {
+    margin-bottom: s.$space-md;
+    font-size: t.rem(28);
+    color: s.$color-secondary;
+  }
+
+  &__title {
+    margin-bottom: s.$space-sm;
+    font-size: t.rem(22);
+    color: s.$color-primary-dark;
+  }
+
+  &__text {
+    color: s.$color-text-soft;
+  }
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

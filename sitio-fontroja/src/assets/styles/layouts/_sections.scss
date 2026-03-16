@@ -1,0 +1,111 @@
+@use "../settings" as s;
+@use "../tools" as t;
+
+.section {
+  padding-top: s.$space-3xl;
+  padding-bottom: s.$space-3xl;
+  scroll-margin-top: t.rem(70);
+
+  &--light {
+    background-color: s.$color-surface;
+  }
+
+  &--accent {
+    background: linear-gradient(180deg, #eef5ef 0%, #f7f5ef 100%);
+  }
+}
+
+.about {
+  &__grid {
+    display: grid;
+    gap: s.$space-xl;
+  }
+
+  &__text {
+    color: s.$color-text-soft;
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: s.$radius-lg;
+    box-shadow: s.$shadow-md;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.routes {
+  display: grid;
+  gap: s.$space-lg;
+}
+
+.route {
+  padding: s.$space-lg;
+  background-color: s.$color-surface;
+  border-left: 4px solid s.$color-secondary;
+  border-radius: s.$radius-md;
+  box-shadow: s.$shadow-sm;
+
+  &__title {
+    margin-bottom: s.$space-xs;
+    font-size: t.rem(20);
+    color: s.$color-primary-dark;
+  }
+
+  &__meta {
+    margin-bottom: s.$space-sm;
+    font-weight: 700;
+    color: s.$color-secondary;
+  }
+
+  &__text {
+    color: s.$color-text-soft;
+  }
+}
+
+.visit {
+  &__grid {
+    display: grid;
+    gap: s.$space-lg;
+  }
+
+  &__item {
+    padding: s.$space-lg;
+    background-color: s.$color-surface;
+    border: 1px solid s.$color-border;
+    border-radius: s.$radius-md;
+  }
+
+  &__title {
+    margin-bottom: s.$space-sm;
+    font-size: t.rem(20);
+    color: s.$color-primary-dark;
+  }
+
+  &__text {
+    color: s.$color-text-soft;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    &__grid {
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+    }
+  }
+
+  .routes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .visit {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

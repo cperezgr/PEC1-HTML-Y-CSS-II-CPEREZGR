@@ -1,0 +1,51 @@
+@use "../settings" as s;
+@use "../tools" as t;
+
+body {
+  font-family: s.$font-base;
+  font-size: t.rem(16);
+  line-height: 1.6;
+  color: s.$color-text;
+  background-color: s.$color-bg;
+}
+
+main {
+  overflow: hidden;
+}
+
+.container {
+  width: min(100% - 2rem, s.$container-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section-title {
+  margin-bottom: s.$space-md;
+  font-size: t.rem(30);
+  line-height: 1.2;
+  color: s.$color-primary-dark;
+}
+
+.section-intro {
+  max-width: 65ch;
+  margin-bottom: s.$space-xl;
+  color: s.$color-text-soft;
+}
+
+.button {
+  display: inline-block;
+  padding: s.$space-sm s.$space-lg;
+  font-weight: 700;
+  color: s.$color-surface;
+  background-color: s.$color-primary;
+  border-radius: s.$radius-md;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover,
+  &:focus {
+    background-color: s.$color-primary-dark;
+    transform: translateY(-2px);
+  }
+}

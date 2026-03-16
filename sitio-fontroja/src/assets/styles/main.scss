@@ -6,15 +6,18 @@
 /**
  * Import dependencies
  */
-@use "dependencies";
+@use "settings";
+@use "tools";
+@use "generic";
+@use "elements";
+@use "components";
 
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
-@use "layouts/home";
-
+@use "layouts";
 /**
  * Do NOT include anything else in this file!
  */
