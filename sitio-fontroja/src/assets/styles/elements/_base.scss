@@ -1,6 +1,10 @@
 @use "../settings" as s;
 @use "../tools" as t;
 
+html {
+  scroll-padding-top: t.rem(110);
+}
+
 body {
   font-family: s.$font-base;
   font-size: t.rem(16);
@@ -47,5 +51,10 @@ main {
   &:focus {
     background-color: s.$color-primary-dark;
     transform: translateY(-2px);
+  }
+}
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: t.rem(70);
   }
 }
